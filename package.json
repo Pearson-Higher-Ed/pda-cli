@@ -1,0 +1,19 @@
+{
+  "name": "pda-cli",
+  "version": "0.0.2",
+  "description": "command line tool for development",
+  "main": "pda.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "pda-cli"
+  },
+  "author": "Pearson Design Accelerator (PDA)",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0"
+  }
+}
