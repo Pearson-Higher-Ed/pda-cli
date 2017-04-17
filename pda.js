@@ -22,12 +22,14 @@ const _generateTravis    = require('./lib/_generateTravis');
 const _generateIndex     = require('./lib/_generateIndex');
 const _install           = require('./lib/_install');
 const _register          = require('./lib/_register');
+const _generateComponent = require('./lib/_generateComponent');
 
 
 
 program
   .version(package.version)
-  .option('-a, --app [appName]', 'Generate App', _generateApp)
+  .option('-A, --app [appName]', 'Generate App using create-react-app', _generateApp)
+  .option('-a, --arch [componentName]', 'Generate Component using component-archetype', _generateComponent)
   .option('-C, --component [componentName]', 'Add a class based component', _addReactClass, program.full)
   .option('-c, --higher_order [componentName]', 'Add a higher order component', _addReactHOC)
   .option('-V, --npm_version [version]', 'Bump version in package.json and git', _npmVersion)
