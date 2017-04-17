@@ -34,7 +34,7 @@ program
   .option('-T, --gen_test [pageName]', 'Generate test page', _generateTestPage)
   .option('-t, --test', 'Run unit tests', _runTests)
   .option('-d, --deploy', 'Deploy the project to GitHub Pages', _deployToGitHub)
-  .option('-D, --docs [path]', 'Generate documentation page for component', _generateDocs)
+  .option('-D, --docs [componentName]', 'Generate documentation page for component', _generateDocs)
   .option('-f, --full', 'Provide full boilerplate for React classes')
   .option('-s, --start', 'Start the application server', _startServer)
   .option('-b, --build', 'Build the project', _buildProject)
