@@ -1,0 +1,6 @@
+*.swp
+*.swo
+.idea
+.DS_Store
+*.log
+yarn.lock

@@ -1,0 +1,22 @@
+language: node_js
+sudo: false
+node_js:
+- 4
+- 6
+script:
+- npm run ci
+- chmod 777 ./test/shell_scripts/run_tests.sh
+- ./test/shell_scripts/run_tests.sh
+
+deploy:
+  provider: npm
+  email: <email>@pearson.com
+  api_key:
+    secure: <placeKeyHere>
+  skip_cleanup: true
+  on:
+    branch: v0
+    tags: true
+env:
+  global:
+    secure: <placeKeyHere>
