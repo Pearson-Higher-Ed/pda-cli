@@ -23,6 +23,7 @@ const _generateIndex     = require('./lib/_generateIndex');
 const _install           = require('./lib/_install');
 const _register          = require('./lib/_register');
 const _generateComponent = require('./lib/_generateComponent');
+const _linkArchetype     = require('./lib/_linkArchetype');
 
 
 
@@ -30,6 +31,7 @@ program
   .version(package.version)
   .option('-A, --app [appName]', 'Generate App using create-react-app', _generateApp)
   .option('-a, --arch [componentName]', 'Generate Component using component-archetype', _generateComponent)
+  .option('-l, --linkarch [pathToArchetype]', 'Generate Component using component-archetype', _linkArchetype)
   .option('-C, --component [componentName]', 'Add a class based component', _addReactClass, program.full)
   .option('-c, --higher_order [componentName]', 'Add a higher order component', _addReactHOC)
   .option('-V, --npm_version [version]', 'Bump version in package.json and git', _npmVersion)
